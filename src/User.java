@@ -3,10 +3,19 @@ public class User {
     private int likableness;
     private String simulation;
 
+    public User(){
+
+    }
 
 
-    
-    // ask the user for their name
+    public String getName(){
+        return name;
+    }
+
+    public void simulation() {
+
+    }
+
 
 
 
