@@ -17,5 +17,6 @@ public class Story {
         name += "| What would you like to be referred as the game progresses? |";
         System.out.println(name);
         String setName = scan.nextLine();
+
     }
 }
