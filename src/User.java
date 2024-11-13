@@ -2,7 +2,7 @@ public class User {
 
     private String name;
 
-    private int likableness;
+    private int likableness = 5;
 
     private String simulation;
 
@@ -14,15 +14,15 @@ public class User {
     }
 
     public String getName(){
+       name = "Azz";
 
         return name;
 
     }
 
-    public int getLikableness(int likableness){
+    public int likablenessDecreases(){
 
         int anti = 1;
-        likableness = 5;
         while (true) {
 
             return likableness - anti;
@@ -33,7 +33,7 @@ public class User {
 
     public String simulation() {
 
-        int simulate = 1 + (int) (Math.random() * 8);
+        int simulate = 1 + (int) (Math.random() * 5);
 
         if (simulate == 1) {
             return "";
@@ -48,15 +48,6 @@ public class User {
             return "";
         }
         if (simulate == 5) {
-            return "";
-        }
-        if (simulate == 6) {
-            return "";
-        }
-        if (simulate == 7) {
-            return "";
-        }
-        if (simulate == 8) {
             return "";
         }
     return "";
