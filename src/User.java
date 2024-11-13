@@ -31,35 +31,35 @@ public class User {
 
     }
 
-    public void simulation() {
+    public String simulation() {
 
         int simulate = 1 + (int) (Math.random() * 8);
 
         if (simulate == 1) {
-            System.out.println();
+            return "";
         }
         if (simulate == 2) {
-            System.out.println();
+            return "";
         }
         if (simulate == 3) {
-            System.out.println();
+            return "";
         }
         if (simulate == 4) {
-            System.out.println();
+            return "";
         }
         if (simulate == 5) {
-            System.out.println();
+            return "";
         }
         if (simulate == 6) {
-            System.out.println();
+            return "";
         }
         if (simulate == 7) {
-            System.out.println();
+            return "";
         }
         if (simulate == 8) {
-            System.out.println();
+            return "";
         }
-
+    return "";
     }
 
     public void endGame() {
