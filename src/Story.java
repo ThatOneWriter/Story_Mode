@@ -13,7 +13,7 @@ public class Story {
                 
                 When given a selection of answer choices, please fully type in your answer; ex. Option A \s
               
-                When given the opportunity to make an interaction, if you select these letters you will be able to do the following: \s
+                When given the opportunity to, if you select these letters you will be able to do the following: \s
                 press 'l' if you would like to view your current likableness   \s
                 press 's' if you would like to view your own stats \s
                 press 'p' if you would like to view the person you are interacting withs information \s
@@ -22,8 +22,9 @@ public class Story {
                 Enjoy!  \s
                \s""";
         System.out.println(information);
-        System.out.print("Would you like to begin? type in x whenever you are ready. ");
-        String x = scan.nextLine();
+        System.out.print("Would you like to begin? type in any letter or press enter whenever you are ready. ");
+        String enter = scan.nextLine();
+
 
         System.out.println();
         String opening = "You are patiently seated in a chair, as you await being called into the principals room." + "\n";
@@ -37,23 +38,27 @@ public class Story {
         System.out.println("Then you hear it, your name is called to enter the room-");
 
         String name = "--------------------------------------------------------------" + "\n";
-        name += "| What would you like to be referred as the game progresses? |";
+        name += "| Narrator: What would you like to be referred as the game progresses? |";
         System.out.println(name);
         String setName = scan.nextLine();
 
         User user = new User(setName, 5 );
-
-        System.out.println("Did you say your name was " + user.getName() + "? \n Option A. Uh.. Sure. \n Option B. That is not what I said!");
+        setName = user.getName();
+        System.out.println("Narrator: Did you say your name was " + setName + "? \n Option A. Uh.. Sure. \n Option B. That is not what I said!");
         System.out.println("(Please either type in 'Option A' or 'Option B' when answering.)");
         String firstSelection = scan.nextLine();
 
         if (firstSelection.equals("Option A") || firstSelection.equals("Option B")) {
-            System.out.println("Alright, " + user.getName() + " it is." );
+            System.out.println("Narrator: Alright, " + setName + " it is." );
+        }
+        else {
+            System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
+            String one = scan.nextLine();
         }
 
         System.out.println("--------------------------------------------------------------");
 
-        String call = "'Mr." + user.getName() + ", Please report to the principals office immediately!',";
+        String call = "'Mr. " + setName + ", Please report to the principals office immediately!',";
         call += """
                 the old lady's voice rattles.
                 As you walk past her receptionist desk, you have the options to either,\s
@@ -65,14 +70,16 @@ public class Story {
         String secondSelection = scan.nextLine();
 
         if (secondSelection.equals("Option A")) {
+            System.out.println("Likableness count: " + user.likablenessDecreases());
             System.out.println("Uh oh! Seems as though your likableness went down a point. Be careful, as once your likableness reaches" +
                     "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
-            System.out.println("Likableness count: " + user.likablenessDecreases());
+
         }
 
         if (secondSelection.equals("Option C")) {
             System.out.println("\n" + "--------------------------------------------------------------");
-            System.out.println("You have been transported to an interactive story mode game where you the user " + "\n" +
+            System.out.println("Narrator: " + "\n" +
+                    "You have been transported to an interactive story mode game where you the user " + "\n" +
                     "are a teacher trying to navigate their way working at an extremely elite " + "\n" +
                     "superhero high school. I won't spoil the rest for you, keep going!");
             System.out.println("--------------------------------------------------------------" + "\n");
