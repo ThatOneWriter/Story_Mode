@@ -8,6 +8,8 @@ public class User {
 
     private int likableness = 5;
 
+    private int day = 7;
+
     private String simulation;
 
     /**
@@ -107,16 +109,26 @@ public class User {
     return "";
     }
 
+    /**
+     * The theWeek method for the user class
+     *
+     * @return returns the day of the week - 1.
+     */
+    public int theWeek() {
+        return day--;
+    }
+
+    /**
+     * The endGame method for the user class
+     *
+     */
     public void endGame() {
 
-        if (likableness == 0) {
+        if ( likableness == 0 || day == 0 ) {
             System.out.println("Sorry, but you have lost all of your credibility. Better luck next time.");
         }
 
     }
-
-
-}
 
 
 }
