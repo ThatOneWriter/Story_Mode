@@ -9,6 +9,12 @@ public class Story {
 
         System.out.println("Hello and Welcome to Story Mode, The Game!");
         String information = """
+                \s
+                You have been transported to an interactive story mode game where you the user  \s
+                are a teacher trying to navigate their way working at an extremely elite \s
+                superhero high school. \s 
+                
+                \s 
                 Here I will be providing you all the information you need to comfortably interact with the game. \s
                 
                 When given a selection of answer choices, please fully type in your answer; ex. Option A \s
@@ -53,7 +59,6 @@ public class Story {
         }
         else {
             System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
-            String one = scan.nextLine();
         }
 
         System.out.println("--------------------------------------------------------------");
@@ -70,8 +75,11 @@ public class Story {
         String secondSelection = scan.nextLine();
 
         if (secondSelection.equals("Option A")) {
+            String outcome =  "You give off a frightnening glare to the poor old lady as her eyes turn glossy, shinning with tears. " +
+                    "\n"+ "It seems as though this wasn't the best response. ";
+            System.out.println(outcome);
             System.out.println("Likableness count: " + user.likablenessDecreases());
-            System.out.println("Uh oh! Seems as though your likableness went down a point. Be careful, as once your likableness reaches" +
+            System.out.println("Narrator: Uh oh! Seems as though your likableness went down a point. Be careful, as once your likableness reaches" +
                     "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
 
         }
@@ -79,11 +87,24 @@ public class Story {
         if (secondSelection.equals("Option C")) {
             System.out.println("\n" + "--------------------------------------------------------------");
             System.out.println("Narrator: " + "\n" +
-                    "You have been transported to an interactive story mode game where you the user " + "\n" +
-                    "are a teacher trying to navigate their way working at an extremely elite " + "\n" +
-                    "superhero high school. I won't spoil the rest for you, keep going!");
+                    " The oh so naive protagonist whines for he has not read the description. Oh how sad a tale is this! ");
             System.out.println("--------------------------------------------------------------" + "\n");
         }
+
+        String theMeeting = "You make your way into the office, taking a seat directly infront of the principal. " +
+                "\n" + "Pincipal Gludious looming presence fills up the room as he glares down at you. You neverously glance around the room.";
+        theMeeting += "Option A. What a horrible name." + "\n"
+        + "Option B. Ask why you have been called for this meeting.";
+        System.out.println(theMeeting);
+        String thirdSelection = scan.nextLine();
+
+        if (thirdSelection.equals("Option A")) {
+            String outcome = "His eyebrows receed upwards as he exclaims, 'What did you just say?!' It dawns on you that you have just said that out loud.";
+            outcome += "\n" + "'Nothing,' you embarrasingly stammer. He appears suspicious of you, but decides to go on with the meeting.";
+            System.out.println(outcome);
+        }
+
+
 
     }
 }
