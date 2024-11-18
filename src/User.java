@@ -88,22 +88,27 @@ public class User {
      */
 
     public String simulation() {
-
+        int score = 0;
         int simulate = 1 + (int) (Math.random() * 5);
 
         if (simulate == 1) {
+            score = 1;
             return "";
         }
         if (simulate == 2) {
+            score = 2;
             return "";
         }
         if (simulate == 3) {
+            score = 3;
             return "";
         }
         if (simulate == 4) {
+            score = 4;
             return "";
         }
         if (simulate == 5) {
+            score = 5;
             return "";
         }
     return "";
@@ -129,6 +134,9 @@ public class User {
         }
 
     }
+
+
+}
 
 
 }
