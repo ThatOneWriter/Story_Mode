@@ -27,7 +27,7 @@ public class Story {
                 Enjoy!  \s
                \s""";
         System.out.println(information);
-        System.out.print("Would you like to begin? type in any letter or press enter whenever you are ready. ");
+        System.out.print("Would you like to begin? type in any letter whenever you are ready to begin the game. ");
         String enter = scan.nextLine();
 
 
@@ -55,10 +55,10 @@ public class Story {
         String firstSelection = scan.nextLine();
 
         if (firstSelection.equals("Option A") || firstSelection.equals("Option B")) {
-                System.out.println("Narrator: Alright, " + setName + " it is.");
+            System.out.println("Narrator: Alright, " + setName + " it is.");
         }
         else {
-                System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
+            System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
         }
         System.out.println("--------------------------------------------------------------");
 
@@ -76,18 +76,18 @@ public class Story {
 
         if (secondSelection.equals("Option A")) {
             String outcome = "You give off a frightnening glare to the poor old lady as her eyes turn glossy, shinning with tears. " +
-                        "\n" + "It seems as though this wasn't the best response. ";
+                    "\n" + "It seems as though this wasn't the best response. ";
             System.out.println(outcome);
             System.out.println("Likableness count: " + user.likablenessDecreases());
             System.out.println("Narrator: Uh oh! Seems as though your likableness went down a point. Be careful, as once your likableness reaches" +
-                        "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
+                    "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
 
         }
 
         if (secondSelection.equals("Option C")) {
             System.out.println("\n" + "--------------------------------------------------------------");
             System.out.println("Narrator: " + "\n" +
-                        " The oh so naive protagonist whines for he has not read the description. Oh how sad a tale is this! ");
+                    " The oh so naive protagonist whines for he has not read the description. Oh how sad a tale is this! ");
             System.out.println("--------------------------------------------------------------" + "\n");
         }
 
@@ -95,8 +95,8 @@ public class Story {
 
         String theMeeting = "You make your way into the office, taking a seat directly infront of the principal. " +
                 "\n" + "Pincipal Gludious looming presence fills up the room as he glares down at you. You neverously glance around the room." + "\n";
-        theMeeting += "Option A. What a horrible name." + "\n"
-                + "Option B. Ask why you have been called for this meeting.";
+        theMeeting += "Option A. Thinking to yourself, what a horrible name that is." + "\n"
+                + "Option B. Disregard his name and ask why you have been called for this meeting.";
         System.out.println(theMeeting);
         String thirdSelection = scan.nextLine();
 
@@ -106,7 +106,28 @@ public class Story {
             System.out.println(outcome);
         }
 
-        
+        String theMeeting1 = "'So anyways,' he leads with, 'as you know the school year begins in a couple of days, and recently theres been a problem with "
+                +"\n" + "the student files.. I had to remove Mr. Godsend from the ...... ";
+        theMeeting1 += "So with that being said I have decided to assign you with the task of reviewing the remaining students files." + "\n";
+        theMeeting1 += "\n" + "Baffled by this newfound responsibility, you decide to, " + "\n"
+        + "Option A. Argue against having to do this." + "\n"
+        + "Option B. Write your own response." + "\n"
+        + "Option C. Flip over the table.";
+        System.out.println(theMeeting1);
+        String fourthSelection = scan.nextLine();
+
+        if (fourthSelection.equals("Option A")) {
+
+        }
+
+        if (fourthSelection.equals("Option B")) {
+
+        }
+
+        if (fourthSelection.equals("Option C")) {
+
+        }
+
 
     }
 }
