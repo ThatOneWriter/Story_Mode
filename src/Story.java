@@ -6,7 +6,6 @@ public class Story {
 
 
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Hello and Welcome to Story Mode, The Game!");
         String information = """
                 \s
@@ -50,17 +49,17 @@ public class Story {
 
         User user = new User(setName, 5 );
         setName = user.getName();
+
         System.out.println("Narrator: Did you say your name was " + setName + "? \n Option A. Uh.. Sure. \n Option B. That is not what I said!");
         System.out.println("(Please either type in 'Option A' or 'Option B' when answering.)");
         String firstSelection = scan.nextLine();
 
         if (firstSelection.equals("Option A") || firstSelection.equals("Option B")) {
-            System.out.println("Narrator: Alright, " + setName + " it is." );
+                System.out.println("Narrator: Alright, " + setName + " it is.");
         }
         else {
-            System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
+                System.out.println("Sorry but that is not one of the answer choices. (Please either type in 'Option A' or 'Option B' when answering.)");
         }
-
         System.out.println("--------------------------------------------------------------");
 
         String call = "'Mr. " + setName + ", Please report to the principals office immediately!',";
@@ -74,37 +73,41 @@ public class Story {
         System.out.print(call);
         String secondSelection = scan.nextLine();
 
+
         if (secondSelection.equals("Option A")) {
-            String outcome =  "You give off a frightnening glare to the poor old lady as her eyes turn glossy, shinning with tears. " +
-                    "\n"+ "It seems as though this wasn't the best response. ";
+            String outcome = "You give off a frightnening glare to the poor old lady as her eyes turn glossy, shinning with tears. " +
+                        "\n" + "It seems as though this wasn't the best response. ";
             System.out.println(outcome);
             System.out.println("Likableness count: " + user.likablenessDecreases());
             System.out.println("Narrator: Uh oh! Seems as though your likableness went down a point. Be careful, as once your likableness reaches" +
-                    "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
+                        "zero, the game is over. Make sure to be conscience of your answers and the ways they may impact the NPCs around you. ");
 
         }
 
         if (secondSelection.equals("Option C")) {
             System.out.println("\n" + "--------------------------------------------------------------");
             System.out.println("Narrator: " + "\n" +
-                    " The oh so naive protagonist whines for he has not read the description. Oh how sad a tale is this! ");
+                        " The oh so naive protagonist whines for he has not read the description. Oh how sad a tale is this! ");
             System.out.println("--------------------------------------------------------------" + "\n");
         }
 
+
+
         String theMeeting = "You make your way into the office, taking a seat directly infront of the principal. " +
-                "\n" + "Pincipal Gludious looming presence fills up the room as he glares down at you. You neverously glance around the room.";
+                "\n" + "Pincipal Gludious looming presence fills up the room as he glares down at you. You neverously glance around the room." + "\n";
         theMeeting += "Option A. What a horrible name." + "\n"
-        + "Option B. Ask why you have been called for this meeting.";
+                + "Option B. Ask why you have been called for this meeting.";
         System.out.println(theMeeting);
         String thirdSelection = scan.nextLine();
 
         if (thirdSelection.equals("Option A")) {
             String outcome = "His eyebrows receed upwards as he exclaims, 'What did you just say?!' It dawns on you that you have just said that out loud.";
-            outcome += "\n" + "'Nothing,' you embarrasingly stammer. He appears suspicious of you, but decides to go on with the meeting.";
+            outcome += "\n" + "'Nothing,' you embarrasingly stammer. He appears suspicious, but decides to go on with the meeting.";
             System.out.println(outcome);
         }
 
-
+        
 
     }
 }
+
