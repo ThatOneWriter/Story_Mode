@@ -1,3 +1,7 @@
+/**
+ * The Student class represents the students. The user can view the students file and sort them.
+ * The Student is assigned a name, an age and grade year, and a method which holds addition information about them.
+ */
 public class Student {
 
     private String name;
@@ -10,6 +14,15 @@ public class Student {
 
     private User student1;
 
+    /**
+     * Constructor for the Student class. This creates an instance of the student given the
+     * parameters mentioned below.
+     *
+     * @param name represents the name of the student.
+     * @param age represents the students int age.
+     * @param year represents the grade the student is in.
+     *
+     */
     public Student(String name, int age, String year){
 
         this.name = name;
@@ -59,6 +72,11 @@ public class Student {
         return descriptions;
     }
 
+    /**
+     * The studentSimulation method will use the simulation method from the User class to randomly assign a student a fighting simulation.
+     * This is how the user will be able to rank the students.
+     *
+     */
     public void studentSimulation() {
 
         student.simulation();
@@ -66,6 +84,6 @@ public class Student {
 
 
     }
-    
+
 
 }
