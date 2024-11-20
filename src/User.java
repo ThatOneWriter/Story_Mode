@@ -8,7 +8,7 @@ public class User {
 
     private int likableness = 5;
 
-    private int day = 7;
+    private int day = 1;
 
     private String simulation;
 
@@ -60,8 +60,11 @@ public class User {
      *
      */
     public int likablenessDecreases(){
+        while (likableness > 0) {
             int thatsnotNice = 1;
-            return likableness - thatsnotNice;
+            likableness = likableness - thatsnotNice;
+        }
+        return likableness;
     }
 
     /**
@@ -73,7 +76,6 @@ public class User {
      *
      */
     public int likablenessIncreases(){
-
         if (likableness == 5) {
             return 5;
         }
@@ -120,7 +122,7 @@ public class User {
      * @return returns the day of the week - 1.
      */
     public int theWeek() {
-        return day--;
+        return day++;
     }
 
     /**
@@ -128,12 +130,10 @@ public class User {
      *
      */
     public void endGame() {
-
         if ( likableness == 0 || day == 0 ) {
             System.out.println("Sorry, but you have lost all of your credibility. Better luck next time.");
         }
 
     }
-
 
 }
